@@ -144,5 +144,4 @@ def grammar(array):
         array[i] = " ".join(array[i])
 
 if __name__ == "__main__":
-    import sys
-    print(money(sys.argv[1]))
+    print(money(input()))
