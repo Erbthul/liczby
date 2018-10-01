@@ -10,8 +10,7 @@ def money(number):
         grosze = 0
         gr_word = ""
     if int(zlotowki):
-        zlotowki = to_array(zlotowki)
-        zl_word = arr2words(zlotowki)
+        zl_word = arr2words(to_array(zlotowki))
         zl_word = " ".join(filter(lambda x: x != "", zl_word))
     else:
         zl_word = ""
@@ -19,8 +18,7 @@ def money(number):
         if len(grosze) == 1:
             grosze += "0"
         grosze = str(int(grosze))
-        grosze = to_array(grosze[:2])
-        gr_word = arr2words(grosze)
+        gr_word = arr2words(to_array(grosze[:2]))
         gr_word = " ".join(filter(lambda x: x != "", gr_word))
         if gr_word == "jeden":
             gr_word += " grosz"
